@@ -27,8 +27,11 @@ label{ display: inline-block;}
 
 html{ 
     font-size: 15px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     --ff:proxima, sans-serif;
     --red:#ca3c3c;
+    --dg:#363636;
 }
 
 body{ font: 16px/1.3 var(--ff);}
@@ -49,13 +52,15 @@ body{ font: 16px/1.3 var(--ff);}
 .col-11{ flex-basis: 91.66%; max-width: 91.66%;}
 .col-12{ flex-basis: 100%; max-width: 100%;}
 
+
 .flex{ display: flex; }
 .justify-space-bet{ justify-content:space-between;}
 .align-center{ align-items: center;}
+.img-resp{ max-width: 100%; height: auto;}
 
 /* custom code */
 
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1;}
 h1{ font-size: 2rem; }
 h1 a{ color: inherit; display: inline-block; line-height: 80px;}
 .btn{ border: 2px solid; color: var(--red); height: 35px; width: 90px; background: none; border-radius: 10px; font: 16px var(--ff); }
@@ -64,13 +69,33 @@ nav li{ margin: 0 5px;}
 nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
 
 
+.banner{ background: #666; color: #fff;}
+.video{ padding: 15rem 0; }
+.video button{ border: none; background: none; font-size: 10rem; color: #fff; margin-right: 41px; }
+.video p{ font-size: 4rem; font-weight: 100;}
+.video a{ color: var(--red);}
 
 
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0; }
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem; }
+.grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem 2rem;}
+.circle{ width: 100px; height: 100px; border: 2px solid; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.feature h3{ font-size: 16px; line-height: 30px;}
+.feature p{ font-size: 14px; font-weight: 100; line-height: 22px;}
 
 
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem;}
 
 
-
+.wrap-5{ padding: 100px 0 140px; background: #ebebeb; color: var(--dg);}
+.wrap-5 .btn{ margin: 0 10px 4rem 0; }
+.wrap-5 .btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
+.portfolio{ position: relative; margin-bottom: 2rem; overflow: hidden; }
+.summary{ position: absolute; background: #fff; left: 0; bottom: -25px; right: 0; text-align: center; padding: 20px 0; opacity: 0; transition: .5s; }
+.summary h3{ color: var(--red); line-height: 40px;}
+.summary small{ display: block; color: #898989; font-weight: 100; font-size: 14px; line-height: 20px;}
+.portfolio:hover .summary{ opacity: 1; bottom: 0;}
+.seemore{ border: none; background: none; color: var(--red); font-size: 36px; }
 
 
 
@@ -83,6 +108,7 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
 
 @media screen and (max-width:1220px){
     html{ font-size: 14px;}
+    h2{ font-size: 62px;}
 }
 @media screen and (max-width:980px){
     .col-t-1{ flex-basis: 8.33%; max-width: 8.33%; }
@@ -97,11 +123,14 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
     .col-t-10{ flex-basis: 83.33%; max-width: 83.33%;}
     .col-t-11{ flex-basis: 91.66%; max-width: 91.66%;}
     .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .video p{font-size: 3rem;}
 }
 
 @media screen and (max-width:767px){
     html{ font-size: 13px;}
     .collapse{ display: none; }
+    .video p{font-size: 2rem;}
+    .wrap-5 .btn{ margin-right: 6px;}
 }
 
 @media screen and (max-width:460px){
@@ -117,5 +146,7 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
     .col-p-10{ flex-basis: 83.33%; max-width: 83.33%;}
     .col-p-11{ flex-basis: 91.66%; max-width: 91.66%;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
-    
+    .video .flex{ flex-flow: column wrap; }
+    .grid{grid-template-columns: repeat(1, 1fr);}
+    .portfolio img{ width: 100%;}
 }
