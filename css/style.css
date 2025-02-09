@@ -5,6 +5,7 @@ img{ vertical-align: bottom;}
 button{ padding: 0; cursor: pointer;}
 label{ display: block;}
 :disabled{ cursor: not-allowed;}
+.hide{ display: none;}
 
 @font-face {
     font-family: proxima;
@@ -65,6 +66,12 @@ h1 a{ color: inherit; display: inline-block; line-height: 80px;}
 nav{ margin-left: -20px;}
 nav li{ margin: 0 5px;}
 nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
+.menu{ display: none; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);}
+.menu span{ display: block; height: 2px; background: var(--red); margin: 5px 10px; transition: 500ms; transform-origin: right center; }
+.menu.active span:nth-child(1){ transform: rotate(-12deg);}
+.menu.active span:nth-child(2){ opacity: 0;}
+.menu.active span:nth-child(3){ transform: rotate(12deg);}
+
 
 .banner{ background: #666; color: #fff;}
 .video{ padding: 15rem 0; }
@@ -129,10 +136,10 @@ canvas{ background: #ddd; margin-top: 50px; border-radius: 50%; max-width: 100%;
 .accordion a{ color: #898989; border: 1px solid #ebebeb; display: block; padding: 13px 19px; border-radius: 10px; font-weight: bold; font-size: 14px;}
 .accordion span.fa{ margin-right: 17px;}
 .accordion p{ display: none; font: 100 14px/22px var(--ff); margin: 20px; }
-.accordion li.active a{ color: var(--red); }
-.accordion li.active p{ display: block; }
+.accordion a.active{ color: var(--red); }
+.accordion li:first-child p{ display: block; }
 .accordion a::after{ content: '+'; float: right;}
-.accordion li.active a::after{ content: '-';}
+.accordion a.active::after{ content: '—';}
 
 
 .wrap-10{ background: var(--red); padding: 34px 0 35px;}
@@ -182,9 +189,15 @@ address{ font: 16px/30px var(--ff)}
 
 @media screen and (max-width:767px){
     html{ font-size: 13px;}
-    .collapse{ display: none; }
+    .collapse{ display: none; position: absolute; top: 80px; background: #000; left: 0; right: 0; padding: 1rem; }
     .video p{font-size: 2rem;}
     .wrap-5 .btn{ margin-right: 6px;}
+    .col-m-6{ flex-basis: 50%; max-width: 50%;}
+    .menu{ display: block;}
+    nav ul{ flex-flow: column;}
+    .collapse > .flex{ flex-flow: column; }
+    nav{ width: 100%; text-align: right;}
+    nav a{ line-height: 40px;}
 }
 
 @media screen and (max-width:460px){
