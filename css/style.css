@@ -72,13 +72,14 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px}
 .menu.active span:nth-child(1){ transform: rotate(-12deg);}
 .menu.active span:nth-child(2){ opacity: 0;}
 .menu.active span:nth-child(3){ transform: rotate(12deg);}
+header .btn{ color: #fa4c4c;}
 
 
 .banner{ background: #666; color: #fff;}
 .video{ padding: 15rem 0; }
 .video button{ border: none; background: none; font-size: 10rem; color: #fff; margin-right: 41px; }
 .video p{ font-size: 4rem; font-weight: 100;}
-.video a{ color: var(--red);}
+.video a{ color: #fff;}
 
 .wrap-3{ background: var(--red); color: #fff; padding: 50px 0; }
 h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem; }
@@ -90,12 +91,12 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem;}
 
 .wrap-5{ padding: 100px 0 140px; background: #ebebeb; color: var(--dg);}
-.wrap-5 .btn{ margin: 0 10px 4rem 0; }
+.wrap-5 .btn{ margin: 0 10px 4rem 0; color: #9e2929; }
 .wrap-5 .btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
 .portfolio{ position: relative; margin-bottom: 2rem; overflow: hidden; }
 .summary{ position: absolute; background: #fff; left: 0; bottom: -25px; right: 0; text-align: center; padding: 20px 0; opacity: 0; transition: .5s; }
 .summary h3{ color: var(--red); line-height: 40px;}
-.summary small{ display: block; color: #898989; font-weight: 100; font-size: 14px; line-height: 20px;}
+.summary small{ display: block; color: #666; font-weight: 100; font-size: 14px; line-height: 20px;}
 .portfolio:hover .summary{ opacity: 1; bottom: 0;}
 .seemore{ border: none; background: none; color: var(--red); font-size: 36px; }
 
@@ -113,7 +114,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .pager a.active{ background: #fff;} */
 .wrap-6 .bx-wrapper{ background: none; border: none; box-shadow: 0 0;}
 .wrap-6 img{ margin: auto;}
-.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff; margin: 0 10px;}
 .wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff;}
 
 
@@ -125,7 +126,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .social a{ display: block; font-size: 24px; width: 50px; line-height: 50px; background: var(--red); color: #fff; border-radius: 50%; text-align: center; }
 .gap{ margin: 50px 0 0 100px;}
 .gap h3{ font-size: 18px; color: var(--red); margin-bottom: 10px; }
-.gap small{ color: #898989; font: 100 14px var(--ff); }
+.gap small{ color: #666; font: 100 14px var(--ff); }
 .gap p{ color: #363636; font: 100 14px/22px var(--ff); margin-top: 2rem;}
 
 
@@ -139,7 +140,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 canvas{ background: #ddd; margin-top: 50px; border-radius: 50%; max-width: 100%;}
 .accordion{ margin-top: 50px;}
 .accordion li{ margin-bottom: 10px;}
-.accordion a{ color: #898989; border: 1px solid #ebebeb; display: block; padding: 13px 19px; border-radius: 10px; font-weight: bold; font-size: 14px;}
+.accordion a{ color: #666; border: 1px solid #ebebeb; display: block; padding: 13px 19px; border-radius: 10px; font-weight: bold; font-size: 14px;}
 .accordion span.fa{ margin-right: 17px;}
 .accordion p{ display: none; font: 100 14px/22px var(--ff); margin: 20px; }
 .accordion a.active{ color: var(--red); }
@@ -155,7 +156,7 @@ canvas{ background: #ddd; margin-top: 50px; border-radius: 50%; max-width: 100%;
 
 
 .wrap-11{ background: #7f7f7f; padding: 28px 0 0 0;}
-.box{ background: #a6a6a6; text-align: center; line-height: 95px; color: #fff; margin-bottom: 27px;}
+.box{ background: #666; text-align: center; line-height: 95px; color: #fff; margin-bottom: 27px;}
 
 
 .wrap-12{ background: #ebebeb; padding: 100px 0; color: var(--dg);}
