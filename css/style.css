@@ -4,6 +4,7 @@ ul{ list-style-type: none; padding: 0;}
 img{ vertical-align: bottom;}
 button{ padding: 0; cursor: pointer;}
 label{ display: block;}
+iframe{ border: none;}
 :disabled{ cursor: not-allowed;}
 .hide{ display: none;}
 
@@ -101,15 +102,20 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 
 .wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem;}
 .reviews{ text-align: center;}
-.review{ display: none;}
-.review.active{ display: block}
+/* .review{ display: none;}
+.review.active{ display: block} */
 .review p{ font: 100 36px/41px var(--ff) }
 .review img{ margin: 1rem 0 10px; }
 .review figcaption{ font-weight: bold; }
-.pager{ margin-top: 25px;}
+/* .pager{ margin-top: 25px;}
 .pager li{ margin: 0 5px;}
 .pager a{ display: block; border: 2px solid #fff; width: 10px; height: 10px; border-radius: 50%;}
-.pager a.active{ background: #fff;}
+.pager a.active{ background: #fff;} */
+.wrap-6 .bx-wrapper{ background: none; border: none; box-shadow: 0 0;}
+.wrap-6 img{ margin: auto;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff;}
+
 
 
 .wrap-7{ padding: 100px 0 140px; background: #fff; color: var(--dg);}
@@ -170,6 +176,17 @@ address{ font: 16px/30px var(--ff)}
 .wrap-13 button{ border: none; color: var(--red); background: none;}
 
 
+
+.overlay{ background: #000c; position: fixed; inset: 0; z-index: 2;}
+.popup{ background: #fff; position: fixed; z-index: 3; padding: 1.5rem 1rem; left: 50%; transform: translateX(-50%); top: 100px; border-radius: 5px; }
+.hiddenform{ display: none;}
+.popup label{ margin: 1rem 0;}
+.popup label input{ float: right; margin-left: 20px;}
+.close{ position: absolute; right: 5px; top: 5px; color: var(--red); background: none; border: none; font-size: 20px;}
+
+
+
+
 @media screen and (max-width:1220px){
     html{ font-size: 14px;}
     h2{ font-size: 62px;}
@@ -209,4 +226,6 @@ address{ font: 16px/30px var(--ff)}
     .portfolio img{ width: 100%;}
     .wrap-10 input{ width: 240px; font-size: 24px;}
     .col-t-auto{ flex-basis: 50%; max-width: 100%;}
+    iframe{ max-width: 100%; height: auto;}
+    .popup{ width: 100%; }
 }

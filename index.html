@@ -6,6 +6,7 @@
     <title>IDDO</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
 </head>
 <body id="home">
     <header>
@@ -206,15 +207,6 @@
                 <div class="col-2"></div>
                 <div class="col-8 col-t-12">
                     <div class="reviews">
-                        <div class="review active">
-                            <blockquote>
-                                <p><q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.</q></p>
-                                <figure>
-                                    <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
-                                    <figcaption>JACK EFRON</figcaption>
-                                </figure>
-                            </blockquote>
-                        </div>
                         <div class="review">
                             <blockquote>
                                 <p><q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.</q></p>
@@ -233,11 +225,20 @@
                                 </figure>
                             </blockquote>
                         </div>
-                        <ul class="pager flex justify-center">
+                        <div class="review">
+                            <blockquote>
+                                <p><q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.</q></p>
+                                <figure>
+                                    <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
+                                    <figcaption>JACK EFRON</figcaption>
+                                </figure>
+                            </blockquote>
+                        </div>
+                        <!-- <ul class="pager flex justify-center">
                             <li><a class="active" href=""></a></li>
                             <li><a href=""></a></li>
                             <li><a href=""></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
@@ -491,70 +492,19 @@
             <button><span class="fa fa-chevron-up"></span></button>
         </div>
     </footer>  
+  <div class="hiddenform">
+    <button class="close"><span class="fa fa-times-circle"></span></button>
+    <form>
+        <label>Name: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button class="btn">Submit</button>
+    </form>
+  </div>  
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    
-<script>
-$(function(){
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 
-    $(".wrap-5 .btn").click(function(){
-        $(".wrap-5 .btn").removeClass("active");
-        $(this).addClass("active");
-
-        const txt=$(this).text();
-        if(txt=="All"){
-            $(".all").fadeIn();
-        }
-        else if(txt=="Website"){
-            $(".all").fadeOut(0);
-            $(".web").fadeIn();
-        }
-        else if(txt=="Branding"){
-            $(".all").fadeOut(0);
-            $(".brand").fadeIn();
-        }
-    });
-
-    $(".wrap-5 .seemore").click(function(){
-        $(this).children("span").toggleClass("fa-minus-circle");
-        $(".wrap-5 .hide").fadeToggle();
-    });
-
-    $(".wrap-7 .seemore").click(function(){
-        $(this).children("span").toggleClass("fa-minus-circle");
-        $(".wrap-7 .hide").slideToggle();
-    });
-
-    $(".accordion a").click(function(e){
-        e.preventDefault();
-
-        $(".accordion a").removeClass("active");
-        $(this).addClass("active");
-        $(".accordion p").slideUp();
-        $(this).next("p").slideDown();
-
-    });
-
-
-    $(".wrap-13 button").click(function(){
-        $("html,body").animate({scrollTop:0})
-    });
-
-
-    $(".menu").click(function(){
-        $(this).toggleClass("active");
-        $(".collapse").slideToggle();
-    });
-
-
-    if(screen.width<768){
-        $("nav a").click(function(){
-            $(".menu").removeClass("active");
-            $(".collapse").slideUp();
-        })
-    }
-    
-
-
-});
-</script>     
+<script src="js/common.js"></script>     
 </body>
 </html>
