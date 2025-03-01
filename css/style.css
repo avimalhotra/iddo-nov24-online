@@ -215,7 +215,7 @@ address{ font: 16px/30px var(--ff)}
     nav ul{ flex-flow: column;}
     .collapse > .flex{ flex-flow: column; }
     nav{ width: 100%; text-align: right;}
-    nav a{ line-height: 40px;}
+    nav a{ line-height: 35px;}
 }
 
 @media screen and (max-width:460px){
